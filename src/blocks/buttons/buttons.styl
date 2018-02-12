@@ -35,7 +35,6 @@
             color #e75735
 
 .ripple
-    background-color rgba(190, 243, 249, 0.3)
     width 5px
     height 5px
     border-radius 50%
@@ -44,6 +43,10 @@
     left 50%
     opacity 0
     transform scale(1)
+    &_green
+        background-color rgba(190, 243, 249, 0.3)
+    &_red
+        background-color rgba(246, 178, 162, 0.3)
 .ripple_show
     animation rippleShow 0.3s ease
 
