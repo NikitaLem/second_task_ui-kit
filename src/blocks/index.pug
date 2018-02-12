@@ -1,13 +1,31 @@
-doctype html
-html
-  head
-    meta(charset="utf-8")
-    meta(name="viewport" content="width=device-width, initial-scale=1.0")
-    title Your cv
-  body
-    .wrapper
-      .wrapper__space-left
-      include grid-left.pug
-      .wrapper__space-middle
-      include grid-right.pug
-      .wrapper__space-right
+include ./buttons/buttons.pug
+
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        title UI-Kit
+    body
+        .wrapper
+            .wrapper_space-left
+            .wrapper_grid
+                .wrapper__buttons
+                    span.buttons__head STANDART BUTTONS
+                    .buttons__item.buttons__item_no-margin
+                        +buttons('s','green')
+                        +buttons('b','green')
+                        +buttons('b','red')
+                        +buttons('s','red')            
+                    .buttons__item
+                        +buttons('s','green','border_bottom')
+                        +buttons('b','green','border_bottom')
+                        +buttons('b','red','border_bottom')
+                        +buttons('s','red','border_bottom') 
+                    .buttons__item
+                        +buttons('s','green','empty')
+                        +buttons('b','green','empty')
+                        +buttons('b','red','empty')
+                        +buttons('s','red','empty')  
+            .wrapper_space-right
