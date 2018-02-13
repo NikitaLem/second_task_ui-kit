@@ -1,4 +1,6 @@
 include ./buttons/buttons.pug
+include ./arw-buttons/arw-buttons.pug
+
 
 <!DOCTYPE html>
 html(lang="en")
@@ -12,8 +14,8 @@ html(lang="en")
             .wrapper_space-left
             .wrapper_grid
                 .wrapper__buttons
-                    span.buttons__head STANDART BUTTONS
-                    .buttons__item.buttons__item_no-margin
+                    span.head STANDART BUTTONS
+                    .buttons__item.buttons__item_big-margin
                         +buttons('s','green')
                         +buttons('b','green')
                         +buttons('b','red')
@@ -27,5 +29,14 @@ html(lang="en")
                         +buttons('s','green','empty')
                         +buttons('b','green','empty')
                         +buttons('b','red','empty')
-                        +buttons('s','red','empty')  
+                        +buttons('s','red','empty') 
+                .wrapper__buttons 
+                    span.head ARROW BUTTONS
+                    .buttons__item.buttons__item_big-margin
+                        +arw-buttons('white', 'left')
+                        +arw-buttons('white', 'right')
+                        +arw-buttons('grey', 'left')
+                        +arw-buttons('grey', 'right')
+                        +arw-buttons('green', 'left')
+                        +arw-buttons('green', 'right')
             .wrapper_space-right
