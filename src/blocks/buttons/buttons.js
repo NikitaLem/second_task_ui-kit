@@ -6,7 +6,6 @@ for(var i=0; i<btns.length; i++) {
     btns[i].addEventListener('click', rippleAnim);
 }
 function rippleAnim(e) {
-    console.log(e.clientX, e.clientY);
     e.target.querySelector('.ripple').style.top = e.clientY - e.target.getBoundingClientRect().top + 'px';
     e.target.querySelector('.ripple').style.left = e.clientX - e.target.getBoundingClientRect().left + 'px';
     e.target.querySelector('.ripple').classList.add('ripple_show');

@@ -1,7 +1,7 @@
 {
-    "name": "first_task_cv",
+    "name": "second_task_cv",
     "version": "1.0.0",
-    "description": "First Task CV webpack",
+    "description": "Second Task CV webpack",
     "scripts": {
         "build": "webpack -p",
         "watch": "webpack --watch",
@@ -10,6 +10,8 @@
     "author": "",
     "license": "ISC",
     "dependencies": {
+        "chart.js": "^2.7.1",
+        "jquery": "^3.3.1",
         "moment": "^2.20.1"
     },
     "devDependencies": {
