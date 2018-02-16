@@ -6,7 +6,7 @@ var ctx = document.getElementById("myChart");
 var myChart = new Chart(ctx, {
     type: 'pie',
     data: {
-        labels: ["Red", "Blue", "Yellow", "Green"],
+        labels: ["Grey", "Red", "Green", "Light_grey"],
         datasets: [{
             data: [5, 12, 12, 15],
             backgroundColor: [
@@ -27,9 +27,6 @@ var myChart = new Chart(ctx, {
     options: {
         cutoutPercentage: 60,
         responsive: true,
-        responsiveAnimationDuration: 1000,
-        tooltips: {
-            enabled: false
-        } 
+        responsiveAnimationDuration: 1000
     }
 });
