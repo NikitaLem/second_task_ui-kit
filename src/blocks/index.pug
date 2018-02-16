@@ -1,5 +1,6 @@
 include ./buttons/buttons.pug
 include ./arw-buttons/arw-buttons.pug
+include ./prc-charts/prc-charts.pug
 
 
 <!DOCTYPE html>
@@ -42,6 +43,14 @@ html(lang="en")
                 .wrapper__buttons 
                     span.head PERCENTAGES/PIE CHART
                     .charts-wrapper
-                        include ./prc-charts/pie-charts.pug
-                    include ./prc-charts/prc-charts.pug
+                        .charts-item
+                            +prcChart('0','1') 
+                        .charts-item
+                            +prcChart('38','1')
+                        .charts-item
+                            +prcChart('62','1')
+                        .charts-item
+                            +prcChart('89','1')
+                        .charts-item.charts-item_pie
+                            include ./prc-charts/pie-charts.pug
             .wrapper_space-right

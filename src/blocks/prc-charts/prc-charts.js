@@ -1,14 +1,15 @@
+import '../../js/jquery.circliful.min'
+
 $( document ).ready(function() { // 6,32 5,38 2,34
-    $("#my-prc-chart").circliful({
+    $(".my-prc-chart_1").circliful({
         animation: 1,
-        animationStep: 5,
-        foregroundBorderWidth: 15,
-        backgroundBorderWidth: 15,
-        percent: 38,
-        textSize: 28,
-        textStyle: 'font-size: 12px;',
-        textColor: '#666',
-        multiPercentage: 1,
-        percentages: [10, 20, 30]
+        animationStep: 1,
+        foregroundColor: '#e75735',
+        backgroundColor: 'none',
+        foregroundBorderWidth: 5,
+        fontColor: '#9d9d9d',
+        percentageTextSize: 40,
+        textAdditionalCss: 'font-family: Conv_Lato-Light',
+        noPercentageSign: true
     });
 })

@@ -1,5 +1,6 @@
 @import '/buttons/buttons.styl'
 @import '/arw-buttons/arw-buttons.styl'
+@import '/prc-charts/prc-charts.styl'
 @import 'fonts.styl'
 
 *
@@ -34,9 +35,14 @@ body
 .btn, .arw-btn
     margin 0 12px 0 12px
 .charts-wrapper
+    display flex
+    justify-content space-around
+.charts-item
     position relative
     height 13.57vw
     width 13.57vw
     margin-top: 20px
-#myChart
-    position absolute
+    &_pie
+        padding 20px
+        height 13.3vw
+        width 13.3vw
