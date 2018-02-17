@@ -1,3 +1,8 @@
+$arrowText
+    display inline-block
+    padding 6px
+    border-width 0 2px 2px 0
+
 .arw-btn
     position relative
     width 44px
@@ -8,29 +13,39 @@
     &_white
         background-color #fff
         border #4eb7a8 solid 2px
-        color #4eb7a8
         &:active
             background-color #4eb7a8
             border #4eb7a8 solid 2px
-            color #fff
     &_green
         background-color #4eb7a8
         border #4eb7a8 solid 2px
-        color #fff
         &:active
             background-color #fff
             border #4eb7a8 solid 2px
-            color #4eb7a8
     &_grey
         background-color #e5e5e5
         border #e5e5e5 solid 2px
-        color #fff
     &_left
-        transform rotate(0deg)
+        transform rotate(135deg)
     &_right
-        transform rotate(180deg)
+        transform rotate(-45deg)
     &__text
-        position absolute
-        left 25%
-        top 25%
-        font-size 18px
+        &_white
+            border solid #4eb7a8
+            display inline-block
+            padding 6px
+            border-width 0 2px 2px 0
+            &:active
+                border-color #fff
+        &_green
+            border solid #fff
+            display inline-block
+            padding 6px
+            border-width 0 2px 2px 0
+            &:active
+                border-color #4eb7a8
+        &_grey
+            border solid #fff
+            display inline-block
+            padding 6px
+            border-width 0 2px 2px 0
