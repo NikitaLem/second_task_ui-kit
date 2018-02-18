@@ -1,7 +1,7 @@
 include ./buttons/buttons.pug
 include ./arw-buttons/arw-buttons.pug
 include ./prc-charts/prc-charts.pug
-
+include ./sliders/sliders.pug
 
 <!DOCTYPE html>
 html(lang="en")
@@ -55,5 +55,9 @@ html(lang="en")
                             include ./prc-charts/pie-charts.pug
                 .wrapper__buttons 
                     span.head SLIDERS
-                    include ./sliders/sliders.pug
+                .sliders__container
+                    .sliders__item
+                        +sliders('red')
+                    .sliders__item
+                        +sliders('green','hide')
             .wrapper_space-right

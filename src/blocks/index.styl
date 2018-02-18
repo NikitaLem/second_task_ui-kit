@@ -1,6 +1,7 @@
 @import '/buttons/buttons.styl'
 @import '/arw-buttons/arw-buttons.styl'
 @import '/prc-charts/prc-charts.styl'
+@import '/sliders/sliders.styl'
 @import 'fonts.styl'
 
 *
@@ -10,6 +11,7 @@ body
     padding 0
 .wrapper
     display flex
+    margin-bottom 3%
     &_space-left
         flex-basis 7.57vw
     &_grid
@@ -24,14 +26,14 @@ body
 .wrapper__buttons
     display flex
     flex-direction column
-    margin-top 5%
+    margin-top 3%
 .buttons__item
     display flex
     align-items flex-end
     justify-content center
     margin-top 20px
     &_big-margin
-        margin-top 5%
+        margin-top 3%
 .btn, .arw-btn
     margin 0 12px 0 12px
 .charts-wrapper
@@ -46,3 +48,10 @@ body
         padding 20px
         height 13.3vw
         width 13.3vw
+.sliders__container
+    display flex
+    justify-content space-between
+    margin-top 3%
+.sliders__item
+    max-width 500px
+    width 100%

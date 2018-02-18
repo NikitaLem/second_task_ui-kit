@@ -1,1 +1,3 @@
-input.sliders(type='range' value="0" min='0' max='100' step='1')
+mixin sliders(color, popup)
+    input(class="sliders sliders_"+color type='range' value="0" min='0' max='100' step='1')
+    div(class="sliders__popup sliders__popup_"+popup)
