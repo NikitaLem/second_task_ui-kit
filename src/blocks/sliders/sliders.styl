@@ -5,10 +5,11 @@
     height 5px
     background #e5e5e5
     outline none
+    border-radius 3px
 .sliders::-webkit-slider-thumb
+    position relative
     -webkit-appearance none
     appearance none
-    position relative
     width 19px
     height 19px
     border-radius 50%
@@ -38,6 +39,15 @@
     border-width 3px
     border-style solid
     border-color #e75735 transparent transparent transparent
-
-.sliders__popup_hide
+.sliders_track
+    background -webkit-linear-gradient(left, #4eb7a8 0%, #4eb7a8 1%, #e5e5e5 1% ,#e5e5e5 100%)
+.sliders__grade
     display none
+    justify-content space-between
+    margin-top 12px
+.sliders__grade_show
+    display flex
+.sliders__value
+    color #d1d1d1
+    font-size 11px
+    font-family 'Conv_Lato-Black'
