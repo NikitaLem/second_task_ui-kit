@@ -1,0 +1,6 @@
+mixin stages(num)
+    - var n = 1
+    div(class="stages")
+        ul(class="stages__progress")
+            while n <= num
+                li(class="stages__mark")= n++

@@ -2,6 +2,7 @@ include ./buttons/buttons.pug
 include ./arw-buttons/arw-buttons.pug
 include ./prc-charts/prc-charts.pug
 include ./sliders/sliders.pug
+include ./stages/stages.pug
 
 <!DOCTYPE html>
 html(lang="en")
@@ -59,5 +60,11 @@ html(lang="en")
                     .sliders__item
                         +sliders('red','no','popup')
                     .sliders__item
-                        +sliders('green','show','track')
+                        +sliders('green','grade','track')
+                .wrapper__buttons 
+                    span.head STAGES
+                .stages__wrapper
+                        +stages('5')
+                        br
+                        input(type="number" id="test" min='0')
             .wrapper_space-right
