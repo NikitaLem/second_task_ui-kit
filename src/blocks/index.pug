@@ -64,7 +64,12 @@ html(lang="en")
                 .wrapper__buttons 
                     span.head STAGES
                 .stages__wrapper
-                        +stages('5')
-                        br
-                        input(type="number" id="test" min='0')
+                    +stages('5')
+                    br
+                    input(type="number" id="test" min='0')
+                .wrapper__buttons 
+                    span.head FORM ELEMENTS
+                .form__wrapper
+                    .form__container
+                        include ./form-elements/form-elements.pug
             .wrapper_space-right

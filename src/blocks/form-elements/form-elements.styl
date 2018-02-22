@@ -1,0 +1,87 @@
+input-width = 208px
+
+.form
+    display flex
+    flex-direction column
+    width 288px
+.form__item
+    display flex
+    margin-top 12px
+    &_no-margin
+        margin-top 0
+.form__input
+    font-family 'Conv_SourceSansPro-Regular'
+    font-size 14px
+    color #888888
+    padding-left 13px
+    height 28px
+    width input-width
+    border-radius 3px
+    outline none 
+    border none 
+    background #e5e5e5
+.alert-wrapper
+    position relative
+.form__alert
+    position absolute
+    margin-left 8px
+    height 28px
+    width 72px
+    border-radius 3px
+    text-align center
+    vertical-align middle
+    line-height @height
+    color #ffffff
+    font-family 'MyriadPro Regular'
+    font-size 14px
+    opacity 0
+    transition opacity .3s
+    &::after
+        content ""
+        position absolute
+        top 50%
+        right 100%
+        border-width 4px
+        margin-top -4px
+        border-style solid
+    &_red
+        background #e75735
+        opacity 1
+        &::after
+            border-color transparent #e75735 transparent transparent
+    &_green
+        background #4eb7a8
+        opacity 1
+        &::after
+            border-color transparent #4eb7a8 transparent transparent
+.form__message
+    width 288px
+    height 88px
+    border-radius 3px
+    outline none 
+    border none 
+    background #e5e5e5
+    font-family 'Conv_SourceSansPro-Regular'
+    font-size 14px
+    color #888888
+    padding 13px 0 0 13px
+    &:empty::before
+        content "Your Message"
+.form__submit
+    display flex
+    justify-content flex-end
+.sbm
+    box-sizing border-box
+    border-radius 3px
+    cursor pointer
+    border none
+    outline none
+    font-family 'Conv_Lato-Black'
+    color #fff
+    font-size 12px
+    width 118px
+    height 35px
+    &_color-green
+        background-color #4eb7a8
+        &_border-bottom
+            border-bottom #28a290 solid 3px
