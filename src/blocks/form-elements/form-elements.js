@@ -2,7 +2,7 @@ var inputs = document.querySelectorAll('.form__input');
 var alerts = document.querySelectorAll('.form__alert');
 
 for(var i=0; i<inputs.length; i++) {
-    inputs[i].addEventListener('input', helper, false);
+    inputs[i].addEventListener('blur', helper, false);
 }
 
 function helper() {

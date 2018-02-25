@@ -4,7 +4,9 @@
 @import '/sliders/sliders.styl'
 @import '/stages/stages.styl'
 @import '/form-elements/form-elements.styl'
+@import '/form-elements/toggles.styl'
 @import 'fonts.styl'
+@import '/form-elements/thick-boxes.styl'
 
 *
     box-sizing border-box
@@ -60,6 +62,18 @@ body
 .stages__wrapper
     margin-top 3%
 .form__wrapper
+    display flex
     margin-top 3%
 .form__container
     width 50%
+    &_toggles
+        display flex
+        flex-direction column
+        align-items center
+.toggle__wrapper
+    display flex
+    margin-top 3%
+.toggle_margin
+    margin 0 7.5px 0 7.5px
+.head_thick-boxes
+    margin-top 3%

@@ -1,0 +1,6 @@
+mixin toggles(status)
+    label(class="switch")
+        input(class="switch__toggle" type="checkbox" checked=status)
+        span(class="switch__slider")
+            span(class="switch__status switch__status_off") OFF
+            span(class="switch__status switch__status_on") ON

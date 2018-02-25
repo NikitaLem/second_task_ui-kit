@@ -1,0 +1,30 @@
+.checkbox
+    position relative
+    display inline-block
+    height 23px
+    width 23px
+    cursor pointer
+.thick-boxes
+    display none
+    &__icon
+        position absolute
+        top 0
+        right 0
+        bottom 0
+        left 0
+        background #e5e5e5
+        border-radius 50%
+        &:after
+            content ''
+            border solid #c0c0c0
+            border-width 0 0 2px 2px
+            padding 0 0 4px 8px
+            position absolute
+            left 25%
+            top 28%
+            transform rotate(-45deg)
+.thick-boxes:checked + .thick-boxes__icon
+    background #4eb7a8
+.thick-boxes:checked + .thick-boxes__icon:after
+    border solid #ffffff
+    border-width 0 0 2px 2px

@@ -3,6 +3,8 @@ include ./arw-buttons/arw-buttons.pug
 include ./prc-charts/prc-charts.pug
 include ./sliders/sliders.pug
 include ./stages/stages.pug
+include ./form-elements/toggles.pug
+include ./form-elements/thick-boxes.pug
 
 <!DOCTYPE html>
 html(lang="en")
@@ -72,4 +74,17 @@ html(lang="en")
                 .form__wrapper
                     .form__container
                         include ./form-elements/form-elements.pug
+                    .form__container.form__container_toggles
+                        span.head TOGGLES
+                        .toggle__wrapper
+                            .toggle_margin
+                                +toggles()
+                            .toggle_margin
+                                +toggles('checked')
+                        span.head.head_thick-boxes THICK BOXES
+                        .toggle__wrapper
+                            .toggle_margin
+                                +thick-boxes('checked')
+                            .toggle_margin
+                                +thick-boxes()
             .wrapper_space-right
