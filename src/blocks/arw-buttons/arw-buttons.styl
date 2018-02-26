@@ -1,8 +1,3 @@
-$arrowText
-    display inline-block
-    padding 6px
-    border-width 0 2px 2px 0
-
 .arw-btn
     position relative
     width 44px
@@ -16,12 +11,16 @@ $arrowText
         &:active
             background-color #4eb7a8
             border #4eb7a8 solid 2px
+            & .arw-btn__text_white
+                border-color #fff
     &_green
         background-color #4eb7a8
         border #4eb7a8 solid 2px
         &:active
             background-color #fff
             border #4eb7a8 solid 2px
+            & .arw-btn__text_green
+                border-color #4eb7a8
     &_grey
         background-color #e5e5e5
         border #e5e5e5 solid 2px

@@ -5,6 +5,7 @@ include ./sliders/sliders.pug
 include ./stages/stages.pug
 include ./form-elements/toggles.pug
 include ./form-elements/thick-boxes.pug
+include ./search/search.pug
 
 <!DOCTYPE html>
 html(lang="en")
@@ -87,4 +88,13 @@ html(lang="en")
                                 +thick-boxes('checked')
                             .toggle_margin
                                 +thick-boxes()
+                .search-profile__wrapper
+                    .search-profile
+                        span.head SEARCH / DROP DOWN 
+                        .search-profile__container
+                            +search('grey','Search')
+                            +search('red',"I've not found what I'm looking for...")
+                            include ./search/drop-down.pug
+                    .search-profile
+                        span.head USER PROFILE
             .wrapper_space-right
