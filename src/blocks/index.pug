@@ -6,6 +6,7 @@ include ./stages/stages.pug
 include ./form-elements/toggles.pug
 include ./form-elements/thick-boxes.pug
 include ./search/search.pug
+include ./user-profile/user-profile.pug
 
 <!DOCTYPE html>
 html(lang="en")
@@ -97,4 +98,8 @@ html(lang="en")
                             include ./search/drop-down.pug
                     .search-profile
                         span.head USER PROFILE
+                        .user-profile__container
+                            +user-profile('grey-orange','img1', 'Alex Orange', 'ULTRAVIOLANCER')
+                        .user-profile__container
+                            +user-profile('green-white','img2', 'Zigmund Freid', 'WEB DESIGNER')
             .wrapper_space-right
