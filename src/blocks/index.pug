@@ -102,4 +102,13 @@ html(lang="en")
                             +user-profile('grey-orange','img1', 'Alex Orange', 'ULTRAVIOLANCER')
                         .user-profile__container
                             +user-profile('green-white','img2', 'Zigmund Freid', 'WEB DESIGNER')
+                .wrapper__buttons 
+                    span.head NEWS & EVENTS
+                .news__container
+                    .news__item
+                        include ./news/news.pug
+                    .news__item
+                        include ./news/events.pug
+                .wrapper__buttons 
+                    span.head LOCATION
             .wrapper_space-right
