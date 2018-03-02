@@ -1,6 +1,7 @@
-.news
-    .news__image
-    .news__content
-        .news__header It's all going downhill
-        .news__date 24 AUGUST 2013
-        .news__text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed condimentum aliquet venenatis. Etiam a nisi nunc, a tincidunt eros.
+mixin news(date,title,text)
+    div(class="news")
+        div(class="news__image")
+        div(class="news__content")
+            div(class="news__header")=title 
+            div(class="news__date")=date 
+            div(class="news__text")=text

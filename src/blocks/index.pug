@@ -7,6 +7,8 @@ include ./form-elements/toggles.pug
 include ./form-elements/thick-boxes.pug
 include ./search/search.pug
 include ./user-profile/user-profile.pug
+include ./news/events.pug
+include ./news/news.pug
 
 <!DOCTYPE html>
 html(lang="en")
@@ -106,9 +108,10 @@ html(lang="en")
                     span.head NEWS & EVENTS
                 .news__container
                     .news__item
-                        include ./news/news.pug
+                        +news('24 AUGUST 2013',"It's all going downhill","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed condimentum aliquet venenatis. Etiam a nisi nunc, a tincidunt eros.")
                     .news__item
-                        include ./news/events.pug
+                        +events('24','Aug','THIS IS THE TITLE')
                 .wrapper__buttons 
                     span.head LOCATION
+                    include ./location/location.pug
             .wrapper_space-right

@@ -1,9 +1,10 @@
-.events
-    .events__image
-    .events__content
-        .events__date
-            .events__date_num 24 
-            .events__date_month Aug
-        .events__header THIS IS THE TITLE
-        .events__text Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-        button.events__button ADD TO CALENDAR
+mixin events(dateNum, dateMonth, title)
+    div(class="events")
+        div(class="events__image")
+        div(class="events__content")
+            div(class="events__date")
+                div(class="events__date_num")=dateNum 
+                div(class="events__date_month")=dateMonth
+            div(class="events__header")=title
+            div(class="events__text") Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            button(class="events__button") ADD TO CALENDAR
