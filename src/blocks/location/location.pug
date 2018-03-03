@@ -1,3 +1,39 @@
-div(class="location__map" id="map") Map
+script(src="https://use.fontawesome.com/releases/v5.0.7/js/all.js" defer)
 
+div(class="location__map" id="map") Map
+div(class="location__bar")
+    div(class="location__message") Meet us!
+    div(class="location__address") 25 KULACHMET ST KAZAN, RF
+    div(class="location__button-container")   
+        button(class="location__button location__mark" id="mark")
+            i(class="fas fa-map-marker-alt")
+        button(class="location__button location__center" id="center")
+            i(class="fas fa-crosshairs")
+            
+script.
+    function myMap() {
+        var mapCanvas = document.getElementById("map");
+        var myCenter = new google.maps.LatLng(55.83, 49.06);
+        var mapOptions = {
+            center: myCenter,
+            zoom: 17
+        };
+        var map = new google.maps.Map(mapCanvas, mapOptions);
+        var marker = new google.maps.Marker({position: myCenter});
+        marker.setMap(map);
+        var btnMark = document.getElementById('mark');
+        var btnCenter = document.getElementById('center');
+
+        btnMark.addEventListener('click', setMark, false);
+        btnCenter.addEventListener('click', returnToCenter, false);
+
+        function setMark() {    
+            marker.position = map.getCenter();
+            marker.setMap(map);
+        }
+
+        function returnToCenter() {
+            map.panTo(myCenter);
+        }
+    }
 script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBuI7KLAnp1-V15NterLpZP-TtTsgT_PTM&callback=myMap")
