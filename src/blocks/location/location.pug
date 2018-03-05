@@ -19,7 +19,12 @@ script.
             zoom: 17
         };
         var map = new google.maps.Map(mapCanvas, mapOptions);
-        var marker = new google.maps.Marker({position: myCenter});
+        var marker = new google.maps.Marker({
+            position: myCenter, 
+            icon: "../images/14.png",
+            animation: google.maps.Animation.DROP,
+            draggable: true
+            });
         marker.setMap(map);
         var btnMark = document.getElementById('mark');
         var btnCenter = document.getElementById('center');
