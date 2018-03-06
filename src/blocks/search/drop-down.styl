@@ -1,29 +1,61 @@
-.drop-down
-    display inline-block
-    position relative
-    width 288px
-.drop-down__input
-    -webkit-appearance none
-    -moz-appearance none
-    border none 
-    outline none 
-    border-radius 5px
-    height 28px
-    width 288px
-    padding 5px 0 7px 8px
-    float left
-    font-family 'Conv_SourceSansPro-Regular'
-    font-size 14px
-    background -webkit-linear-gradient(left, #e5e5e5 0%, #e5e5e5 89%, #4eb7a8 89%, #4eb7a8 100%)
-    color #888888
-    cursor pointer
-.drop-down:after
-    position absolute
-    top 25%
-    right 4%
-    content ""
-    border solid #fff
-    padding 0 8px 8px 0
-    border-width 0 2px 2px 0
-    pointer-events none
-    transform rotate(45deg)
+@media screen and (max-width 700px)
+    .drop-down
+        display inline-block
+        position relative
+        width 288px
+    .drop-down__input
+        -webkit-appearance none
+        -moz-appearance none
+        border none 
+        outline none 
+        border-radius 5px
+        height 28px
+        width 288px
+        padding 5px 0 7px 8px
+        float left
+        font-family 'Conv_SourceSansPro-Regular'
+        font-size 14px
+        background -webkit-linear-gradient(left, #e5e5e5 0%, #e5e5e5 89%, #4eb7a8 89%, #4eb7a8 100%)
+        color #888888
+        cursor pointer
+    .drop-down:after
+        position absolute
+        top 25%
+        right 4%
+        content ""
+        border solid #fff
+        padding 0 8px 8px 0
+        border-width 0 2px 2px 0
+        pointer-events none
+        transform rotate(45deg)
+
+@media screen and (min-width 700px)
+    .drop-down
+        display inline-block
+        position relative
+        width 41.14vw
+    .drop-down__input
+        -webkit-appearance none
+        -moz-appearance none
+        border none 
+        outline none 
+        border-radius 5px
+        height 4vw
+        width 41.14vw
+        padding 0.71vw 0 1vw 1.1vw
+        float left
+        font-family 'Conv_SourceSansPro-Regular'
+        font-size 2vw
+        background -webkit-linear-gradient(left, #e5e5e5 0%, #e5e5e5 89%, #4eb7a8 89%, #4eb7a8 100%)
+        color #888888
+        cursor pointer
+    .drop-down:after
+        position absolute
+        top 25%
+        right 4%
+        content ""
+        border solid #fff
+        padding 0 1.14vw 1.14vw 0
+        border-width 0 2px 2px 0
+        pointer-events none
+        transform rotate(45deg)
