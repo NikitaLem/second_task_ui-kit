@@ -1,0 +1,102 @@
+.calendar__header
+    height 179px
+    width 279px
+    border-radius 4px 4px 0 0
+    background #e75735
+    display flex
+    flex-direction column
+    align-items center
+    justify-content space-between
+    color #ffffff
+.calendar__date
+    font-family 'Conv_Lato-Light'
+    font-size 80px
+    margin-top 15px
+.calendar__slider
+    background #d54c2c
+    width 100%
+    height 43px
+    line-height 43px
+    text-align center
+.calendar__month
+    display inline-block
+    font-family 'Conv_Lato-Light'
+    font-size 24px
+    width 72%
+.calendar__button
+    display inline-block
+    height 43px
+    width 14%
+    cursor pointer
+    &:hover
+        background rgba(255, 175, 100, 1)
+    &_left
+        float left
+        display flex
+        justify-content center
+        align-items center
+        &:after
+            display inline-block
+            content ''
+            border solid #ffffff
+            border-width 0 0 2px 2px
+            padding 4px
+            transform rotate(45deg)
+    &_right
+        float right
+        display flex
+        justify-content center
+        align-items center
+        &:after
+            display inline-block
+            content ''
+            border solid #ffffff
+            border-width 0 0 2px 2px
+            padding 4px
+            transform rotate(-135deg)
+.calendar__week
+    padding 0
+    margin 0
+.calendar__days
+    display inline-block
+    font-family 'Conv_Lato-Black'
+    font-size 9px
+    padding 10px 10px 9px 10px
+.calendar__body
+    height 201px
+    width 279px
+.calendar__list
+    margin 0
+    padding 0
+    display flex
+    flex-wrap wrap
+    justify-content space-between
+.calendar__list-item
+    display inline-block
+    height 39px
+    width 39px
+    background #f2f2f2
+    font-family 'Conv_SourceSansPro-Regular'
+    font-size 20px
+    margin-top 1px
+    text-align center
+    line-height 39px
+    cursor pointer
+    color #868686
+    &_empty
+        color #ffffff
+    &_active
+        background #e75735
+        color #ffffff
+.calendar__footer
+    height 49px
+    width 279px
+    line-height 49px
+    background #e5e5e5
+    border-radius 0 0 4px 4px
+    margin-top 1px
+.calendar__info
+    color #868686
+    font-family 'Conv_Lato-Black'
+    font-size 13px
+    margin-left 20px
