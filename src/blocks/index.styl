@@ -13,6 +13,7 @@
 @import '/news/events.styl'
 @import '/location/location.styl'
 @import '/calendar/calendar.styl'
+@import '/messaging/messaging.styl'
 @import 'fonts.styl'
 
 
@@ -106,8 +107,13 @@ body
     margin-top 3%
     display flex
     justify-content space-between
+.flex-container
+    display flex
 .calendar__wrapper
     display flex
     flex-direction column
-    width 50%
+    align-items center
+    flex-basis 50%
+    margin-top 3%
+.calendar__item
     margin-top 3%

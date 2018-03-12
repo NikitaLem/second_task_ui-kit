@@ -115,8 +115,13 @@ html(lang="en")
                     span.head LOCATION
                     .location__container
                         include ./location/location.pug
-                .calendar__wrapper
-                    span.head CALENDAR
-                    include ./calendar/calendar.pug
-                    
+                .flex-container
+                    .calendar__wrapper
+                        span.head CALENDAR
+                        .calendar__item
+                            include ./calendar/calendar.pug
+                    .calendar__wrapper
+                        span.head MESSAGING
+                        .calendar__item
+                            include ./messaging/messaging.pug
             .wrapper_space-right
