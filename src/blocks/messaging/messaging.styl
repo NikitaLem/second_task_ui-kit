@@ -69,6 +69,15 @@
     outline none
     &_get
         overflow-wrap break-word
+        overflow-y auto
+        &::-webkit-scrollbar
+            width 5px
+        &::-webkit-scrollbar-track
+            background #f2f2f2
+        &::-webkit-scrollbar-thumb
+            background #8e8d8d
+            height 5px
+            border-radius 2px
         &:before
             content ''
             border-style solid
