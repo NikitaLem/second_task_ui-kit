@@ -1,6 +1,7 @@
-mixin events(dateNum, dateMonth, title)
+mixin events(dateNum, dateMonth, title, ImgSrc)
     div(class="events")
-        div(class="events__image")
+        div(class="events__image-container")
+            img(class="events__image" src=ImgSrc alt="pic")
         div(class="events__content")
             div(class="events__date")
                 div(class="events__date_num")=dateNum 

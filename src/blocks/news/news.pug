@@ -1,6 +1,7 @@
-mixin news(date,title,text)
+mixin news(date, title, text, ImgSrc)
     div(class="news")
-        div(class="news__image")
+        div(class="news__image-container")
+            img(class="news__image" src=ImgSrc alt="pic")
         div(class="news__content")
             div(class="news__header")=title 
             div(class="news__date")=date 
