@@ -1,49 +1,49 @@
 .arw-btn
-    width 44px
-    height 44px
-    outline none
-    cursor pointer
-    border-radius 50%
+  width 44px
+  height 44px
+  outline none
+  cursor pointer
+  border-radius 50%
+  &_white
+    background-color #fff
+    border #4eb7a8 solid 2px
+    &:active
+      background-color #4eb7a8
+      border #4eb7a8 solid 2px
+      & .arw-btn__text_white
+        border-color #fff
+  &_green
+    background-color #4eb7a8
+    border #4eb7a8 solid 2px
+    &:active
+      background-color #fff
+      border #4eb7a8 solid 2px
+      & .arw-btn__text_green
+        border-color #4eb7a8
+  &_grey
+    background-color #e5e5e5
+    border #e5e5e5 solid 2px
+  &_left
+    transform rotate(135deg)
+  &_right
+    transform rotate(-45deg)
+  &__text
     &_white
-        background-color #fff
-        border #4eb7a8 solid 2px
-        &:active
-            background-color #4eb7a8
-            border #4eb7a8 solid 2px
-            & .arw-btn__text_white
-                border-color #fff
+      border solid #4eb7a8
+      display inline-block
+      padding 6px
+      border-width 0 2px 2px 0
+      &:active
+        border-color #fff
     &_green
-        background-color #4eb7a8
-        border #4eb7a8 solid 2px
-        &:active
-            background-color #fff
-            border #4eb7a8 solid 2px
-            & .arw-btn__text_green
-                border-color #4eb7a8
+      border solid #fff
+      display inline-block
+      padding 6px
+      border-width 0 2px 2px 0
+      &:active
+        border-color #4eb7a8
     &_grey
-        background-color #e5e5e5
-        border #e5e5e5 solid 2px
-    &_left
-        transform rotate(135deg)
-    &_right
-        transform rotate(-45deg)
-    &__text
-        &_white
-            border solid #4eb7a8
-            display inline-block
-            padding 6px
-            border-width 0 2px 2px 0
-            &:active
-                border-color #fff
-        &_green
-            border solid #fff
-            display inline-block
-            padding 6px
-            border-width 0 2px 2px 0
-            &:active
-                border-color #4eb7a8
-        &_grey
-            border solid #fff
-            display inline-block
-            padding 6px
-            border-width 0 2px 2px 0
+      border solid #fff
+      display inline-block
+      padding 6px
+      border-width 0 2px 2px 0

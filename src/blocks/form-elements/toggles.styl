@@ -1,61 +1,55 @@
 .switch
-    display inline-block
-    position relative
-    height 24px
-    width 60px
+  display inline-block
+  position relative
+  height 24px
+  width 60px
 .switch__toggle
-    display none
+  display none
 .switch__slider
-    position absolute
-    cursor pointer
-    top 0
-    right 0
-    bottom 0
-    left 0
-    background #e5e5e5
-    border-radius 16px
-    transition .6s
-    text-align right
+  position absolute
+  cursor pointer
+  top 0
+  right 0
+  bottom 0
+  left 0
+  background #e5e5e5
+  border-radius 16px
+  transition .6s
+  text-align right
 .switch__slider:before
-    content ''
-    position absolute
-    height 18px
-    width 18px
-    border-radius 50%
-    background #ffffff
-    left 3px
-    top 3px
-    transition .6s
-    z-index 999
+  content ''
+  position absolute
+  height 18px
+  width 18px
+  border-radius 50%
+  background #ffffff
+  left 3px
+  top 3px
+  transition .6s
+  z-index 999
 .switch__toggle:checked + .switch__slider
-    background #4eb7a8
+  background #4eb7a8
 .switch__toggle:checked + .switch__slider:before
-    transform translateX(36px)
+  transform translateX(36px)
 .switch__status
-    font-family 'Conv_Lato-Black'
-    font-size 12px
+  font-family 'Conv_Lato-Black'
+  font-size 12px
+  color #ffffff
+  margin-top 5px
+  &_off
+    position absolute
+    right 0
+    opacity 1
+    transition .3s
+    margin-right 10px
+  &_on
+    position absolute
+    left 0
+    opacity 0
+    transition .3s
     color #ffffff
-    margin-top 5px
-    &_off
-        position absolute
-        right 0
-        opacity 1
-        transition .3s
-        margin-right 10px
-    &_on
-        position absolute
-        left 0
-        opacity 0
-        transition .3s
-        color #ffffff
-        margin-left 10px
+    margin-left 10px
 .switch__toggle:checked + .switch__slider > .switch__status_off
-    opacity 0 
+  opacity 0 
 .switch__toggle:checked + .switch__slider > .switch__status_on
-    opacity 1 
-
-/*@keyframes flip
-    0%
-        opacity 0
-    100%
-        opacity 1*/
+  opacity 1

@@ -1,15 +1,3 @@
-include ./buttons/buttons.pug
-include ./arw-buttons/arw-buttons.pug
-include ./prc-charts/prc-charts.pug
-include ./sliders/sliders.pug
-include ./stages/stages.pug
-include ./form-elements/toggles.pug
-include ./form-elements/thick-boxes.pug
-include ./search/search.pug
-include ./user-profile/user-profile.pug
-include ./news/events.pug
-include ./news/news.pug
-
 <!DOCTYPE html>
 html(lang="en")
     head
@@ -18,114 +6,122 @@ html(lang="en")
         meta(http-equiv="X-UA-Compatible", content="ie=edge")
         title UI-Kit
     body
+        include ./buttons/buttons.pug
+        include ./arw-buttons/arw-buttons.pug
+        include ./prc-charts/prc-charts.pug
+        include ./sliders/sliders.pug
+        include ./stages/stages.pug
+        include ./form-elements/toggles.pug
+        include ./form-elements/thick-boxes.pug
+        include ./search/search.pug
+        include ./user-profile/user-profile.pug
+        include ./news/events.pug
+        include ./news/news.pug
         .wrapper
-            .wrapper_space-left
-            .wrapper_grid
-                .wrapper__buttons
-                    span.head STANDART BUTTONS
-                    .buttons__item.buttons__item_big-margin
-                        +buttons('s','green')
-                        +buttons('b','green')
-                        +buttons('b','red')
-                        +buttons('s','red')            
-                    .buttons__item
-                        +buttons('s','green','border_bottom')
-                        +buttons('b','green','border_bottom')
-                        +buttons('b','red','border_bottom')
-                        +buttons('s','red','border_bottom') 
-                    .buttons__item
-                        +buttons('s','green','empty')
-                        +buttons('b','green','empty')
-                        +buttons('b','red','empty')
-                        +buttons('s','red','empty') 
-                .wrapper__buttons 
-                    span.head ARROW BUTTONS
-                    .buttons__item.buttons__item_big-margin
-                        +arw-buttons('white', 'left')
-                        +arw-buttons('white', 'right')
-                        +arw-buttons('grey', 'left')
-                        +arw-buttons('grey', 'right')
-                        +arw-buttons('green', 'left')
-                        +arw-buttons('green', 'right')
-                .wrapper__buttons 
-                    span.head PERCENTAGES/PIE CHART
-                    .charts-wrapper
-                        .charts-item
-                            +prcChart('0','1') 
-                        .charts-item
-                            +prcChart('38','1')
-                        .charts-item
-                            +prcChart('62','1')
-                        .charts-item
-                            +prcChart('89','1')
-                        .charts-item.charts-item_pie
-                            include ./prc-charts/pie-charts.pug
-                .wrapper__buttons 
-                    span.head SLIDERS
-                .sliders__container
+            section.flex-container.flex-container_flex-dir-col
+                header.head standart buttons
+                .buttons__item.buttons__item_big-margin
+                    +buttons('s','green')
+                    +buttons('b','green')
+                    +buttons('b','red')
+                    +buttons('s','red')            
+                .buttons__item
+                    +buttons('s','green','border_bottom')
+                    +buttons('b','green','border_bottom')
+                    +buttons('b','red','border_bottom')
+                    +buttons('s','red','border_bottom') 
+                .buttons__item
+                    +buttons('s','green','empty')
+                    +buttons('b','green','empty')
+                    +buttons('b','red','empty')
+                    +buttons('s','red','empty') 
+            section.container
+                header.head arrows buttons
+                .buttons__item.buttons__item_big-margin
+                    +arw-buttons('white', 'left')
+                    +arw-buttons('white', 'right')
+                    +arw-buttons('grey', 'left')
+                    +arw-buttons('grey', 'right')
+                    +arw-buttons('green', 'left')
+                    +arw-buttons('green', 'right')
+            section.container
+                header.head percentages/pie-chart
+                .charts-wrapper
+                    .charts-item
+                        +prcChart('0','1') 
+                    .charts-item
+                        +prcChart('38','1')
+                    .charts-item
+                        +prcChart('62','1')
+                    .charts-item
+                        +prcChart('89','1')
+                    .charts-item.charts-item_pie
+                        include ./prc-charts/pie-charts.pug
+            section.container
+                header.head sliders
+                .flex-container.flex-container_justified-between
                     .sliders__item
                         +sliders('red','no','popup')
                     .sliders__item
                         +sliders('green','grade','track')
-                .wrapper__buttons 
-                    span.head STAGES
-                .stages__wrapper
+            section.container
+                header.head stages
+                .container
                     +stages('5')
-                    br
-                    input(type="number" id="test" min='0')
-                .wrapper__buttons 
-                    span.head FORM ELEMENTS
-                .form__wrapper
-                    .form__container
+                    .container
+                        input(type="number" id="test" min='0')
+            section.container
+                header.head form elements
+                .flex-container
+                    section.form-container
                         include ./form-elements/form-elements.pug
-                    .form__container.form__container_toggles
-                        span.head TOGGLES
-                        .toggle__wrapper
-                            .toggle_margin
+                    section.toggles-boxes-container
+                        header.head toggles
+                        .flex-container
+                            .toggles-boxes-item
                                 +toggles()
-                            .toggle_margin
+                            .toggles-boxes-item
                                 +toggles('checked')
-                        span.head.head_thick-boxes THICK BOXES
-                        .toggle__wrapper
-                            .toggle_margin
+                        header.head thick boxes
+                        .flex-container
+                            .toggles-boxes-item
                                 +thick-boxes('checked')
-                            .toggle_margin
+                            .toggles-boxes-item
                                 +thick-boxes()
-                .search-profile__wrapper
-                    .search-profile
-                        span.head SEARCH / DROP DOWN 
-                        .search-profile__container
-                            +search('grey','Search')
-                            +search('red',"I've not found what I'm looking for...")
-                            include ./search/drop-down.pug
-                    .search-profile
-                        span.head USER PROFILE
-                        .user-profile__container
-                            +user-profile('grey-orange','img1', 'Alex Orange', 'ULTRAVIOLANCER')
-                        .user-profile__container
-                            +user-profile('green-white','img2', 'Zigmund Freid', 'WEB DESIGNER')
-                .wrapper__buttons 
-                    span.head NEWS & EVENTS
-                .news__container
+            section.flex-container
+                section.search-profile-container
+                    header.head search / drop down
+                    .flex-container.flex-container_flex-dir-col
+                        +search('grey','Search')
+                        +search('red',"I've not found what I'm looking for...")
+                        include ./search/drop-down.pug
+                section.search-profile-container
+                    header.head user profile
+                    .flex-container.flex-container_justified-center
+                        +user-profile('grey-orange','img1', 'Alex Orange', 'ULTRAVIOLANCER')
+                    .flex-container.flex-container_justified-center
+                        +user-profile('green-white','img2', 'Zigmund Freid', 'WEB DESIGNER')
+            section.flex-container.flex-container_flex-dir-col
+                header.head news & events
+                .flex-container.flex-container_justified-between
                     .news__item
                         +news('24 AUGUST 2013',"It's all going downhill","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed condimentum aliquet venenatis. Etiam a nisi nunc, a tincidunt eros.", './images/12.jpg')
-                    .news__item
+                    .events__item
                         +events('24','Aug','THIS IS THE TITLE', './images/13.jpg')
-                .wrapper__buttons 
-                    span.head LOCATION
-                    .location__container
-                        include ./location/location.pug
-                .flex-container
-                    .calendar__wrapper
-                        span.head CALENDAR
-                        .calendar__item
-                            include ./calendar/calendar.pug
-                    .calendar__wrapper
-                        span.head MESSAGING
-                        .calendar__item
-                            include ./messaging/messaging.pug
-                .wrapper__buttons
-                    span.head VIDEO
-                    .video__container
-                        include ./video/video.pug
-            .wrapper_space-right
+            section.flex-container.flex-container_flex-dir-col
+                header.head location
+                .container
+                    include ./location/location.pug
+            section.flex-container
+                .calendar__wrapper
+                    header.head calendar
+                    .calendar__item
+                        include ./calendar/calendar.pug
+                .calendar__wrapper
+                    header.head messaging
+                    .calendar__item
+                        include ./messaging/messaging.pug
+            section.flex-container.flex-container_flex-dir-col
+                header.head video
+                .video__container
+                    include ./video/video.pug

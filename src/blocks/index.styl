@@ -17,106 +17,83 @@
 @import '/video/video.styl'
 @import 'fonts.styl'
 
-
+html
+  font-size 62.5%
 *
-    box-sizing border-box
+  box-sizing border-box
 body
-    margin 0
-    padding 0
+  margin 0
+  padding 0
 .wrapper
-    display flex
-    margin-bottom 3%
-    &_space-left
-        flex-basis 7.57vw
-    &_grid
-        flex-basis 84.86vw
-    &_space-right
-        flex-basis 7.57vw
+  padding 0 7.57vw
+  margin-bottom 3%
 .head
-    text-align center
-    font-family 'Conv_Lato-Black'
-    font-size 18px
-    color #4f4f4f
-.wrapper__buttons
-    display flex
-    flex-direction column
-    margin-top 3%
-.buttons__item
-    display flex
-    align-items flex-end
-    justify-content center
-    margin-top 20px
-    &_big-margin
-        margin-top 3%
-.btn, .arw-btn
-    margin 0 12px 0 12px
-.charts-wrapper
-    display flex
-    justify-content space-around
-.charts-item
-    position relative
-    height 13.57vw
-    width 13.57vw
-    margin-top: 20px
-    &_pie
-        padding 20px
-        height 13.3vw
-        width 13.3vw
-.sliders__container
-    display flex
-    justify-content space-between
-    margin-top 3%
-.sliders__item
-    max-width 500px
-    width 100%
-.stages__wrapper,
-.head_thick-boxes,
-.location__container
-    margin-top 3%
-.form__wrapper
-    display flex
-    margin-top 3%
-.form__container
-    width 50%
-    &_toggles
-        display flex
-        flex-direction column
-        align-items center
-.toggle__wrapper
-    display flex
-    margin-top 3%
-.toggle_margin
-    margin 0 7.5px 0 7.5px
-.head_thick-boxes
-    margin-top 3%
-.search-profile__wrapper
-    display flex
-    margin-top 3%
-.search-profile
-    display flex
-    flex-direction column
-    width 50%
-.search-profile__container
-    margin-top 3%
-    display flex
-    flex-direction column
-.user-profile__container
-    margin-top 3%
-    display flex
-    justify-content center
-.news__container
-    margin-top 3%
-    display flex
-    justify-content space-between
+  text-align center
+  text-transform uppercase
+  font-family 'Conv_Lato-Black'
+  font-size 1.8rem
+  color #4f4f4f
+.container
+  margin-top 3%
 .flex-container
-    display flex
-.calendar__wrapper
-    display flex
+  display flex
+  margin-top 3%
+  &_flex-dir-col
     flex-direction column
-    align-items center
-    flex-basis 50%
+  &_justified-between
+    justify-content space-between
+  &_justified-center
+    justify-content center
+.buttons__item
+  display flex
+  align-items flex-end
+  justify-content center
+  margin-top 20px
+  &_big-margin
     margin-top 3%
+.btn, .arw-btn
+  margin 0 12px
+.charts-wrapper
+  display flex
+  justify-content space-around
+.charts-item
+  position relative
+  height 13.57vw
+  width 13.57vw
+  margin-top: 20px
+  &_pie
+    padding 20px
+    height 13.3vw
+    width 13.3vw
+.sliders__item
+  max-width 500px
+  width 100%
+.form-container
+  width 50%
+.toggles-boxes-container
+  display flex
+  flex-direction column
+  align-items center
+  width 50%
+.toggles-boxes-container .flex-container + header
+  margin-top 3%
+.toggles-boxes-item
+  margin 0 7.5px
+.search-profile-container
+  display flex
+  flex-direction column
+  width 50%
+.user-profile__container
+  margin-top 3%
+  display flex
+  justify-content center
+.calendar__wrapper
+  display flex
+  flex-direction column
+  align-items center
+  flex-basis 50%
+  margin-top 3%
 .calendar__item
-    margin-top 3%
+  margin-top 3%
 .video__container
-    margin 3% auto 0 auto
+  margin 3% auto 0 auto

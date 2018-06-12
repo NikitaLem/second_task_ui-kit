@@ -1,57 +1,56 @@
 .btn
-    box-sizing border-box
-    position relative
-    border-radius 3px
-    cursor pointer
-    border none
-    outline none
-    font-family 'Conv_Lato-Black'
-    color #fff
-    &_size_b                           
-        width 118px
-        height 32px
-        font-size 18px
-    &_size_s
-        width 78px
-        height 22px
-        font-size 10px
-    &_color_green
-        background-color #4eb7a8
-        &_border_bottom
-            border-bottom #28a290 solid 3px
-        &_empty
-            background-color #ffffff
-            border #4eb7a8 solid 1px
-            border-bottom #4eb7a8 solid 3px
-            color #4eb7a8
-    &_color_red
-        background-color #e75735
-        &_border_bottom
-            border-bottom #bf3e1f solid 3px
-        &_empty
-            background-color #ffffff
-            border #e75735 solid 1px
-            border-bottom #bf3e1f solid 3px
-            color #e75735
-
+  box-sizing border-box
+  position relative
+  border-radius 3px
+  cursor pointer
+  border none
+  outline none
+  font-family 'Conv_Lato-Black'
+  color #fff
+  &_size_b                           
+    width 118px
+    height 32px
+    font-size 18px
+  &_size_s
+    width 78px
+    height 22px
+    font-size 10px
+  &_color_green
+      background-color #4eb7a8
+    &_border_bottom
+      border-bottom #28a290 solid 3px
+    &_empty
+      background-color #ffffff
+      border #4eb7a8 solid 1px
+      border-bottom #4eb7a8 solid 3px
+      color #4eb7a8
+  &_color_red
+    background-color #e75735
+    &_border_bottom
+      border-bottom #bf3e1f solid 3px
+    &_empty
+      background-color #ffffff
+      border #e75735 solid 1px
+      border-bottom #bf3e1f solid 3px
+      color #e75735
 .ripple
-    width 1px
-    height 1px
-    border-radius 50%
-    position absolute
-    opacity 0
-    transform scale(1)
-    &_green
-        background-color rgba(190, 243, 249, 0.3)
-    &_red
-        background-color rgba(246, 178, 162, 0.3)
+  width 1px
+  height 1px
+  border-radius 50%
+  position absolute
+  opacity 0
+  transform scale(1)
+  &_green
+    background-color rgba(190, 243, 249, 0.3)
+  &_red
+    background-color rgba(246, 178, 162, 0.3)
 .ripple_show
-    animation rippleShow 0.3s ease
+  animation rippleShow 0.3s ease
 
 @keyframes rippleShow
-    0%
-        opacity 0
-        transform scale(1)
-    100%
-        opacity 1
-        transform scale(70)
+  0%
+    opacity 0
+    transform scale(1)
+  100%
+    opacity 1
+    transform scale(70)
