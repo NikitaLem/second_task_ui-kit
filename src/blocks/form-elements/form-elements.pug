@@ -1,13 +1,14 @@
-form.form
-    .form__item.form__item_no-margin
-        input.form__input.form__name(type="text" placeholder="Your Name" required)
-        .alert-wrapper
-            .form__alert
-    .form__item
-        input.form__input.form__email(type="text" placeholder="Your Email" required)
-        .alert-wrapper
-            .form__alert
-    .form__item
-        .form__message(contenteditable="true" placeholder="Your Message")
-    .form__item.form__submit
-        input.sbm.sbm_color-green.sbm_color-green_border-bottom(type="submit" value="SUBMIT")
+mixin form(color, border)
+    form.form
+        section.form__item.form__item_no-margin
+            input(class="form__input form__name" type="text" placeholder="Your Name" required)
+            .alert-container
+                .form__alert
+        section.form__item
+            input(class="form__input form__email" type="text" placeholder="Your Email" required)
+            .alert-container
+                .form__alert
+        section.form__item
+            .form__message(contenteditable="true")
+        section.form__item.form__submit
+            input(class="submit submit_"+color+ " submit_"+border type="submit" value="SUBMIT")

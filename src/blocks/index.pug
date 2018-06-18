@@ -23,27 +23,29 @@ html(lang="en")
         include ./form-elements/toggles.pug
         include ./form-elements/thick-boxes.pug
         include ./search/search.pug
+        include ./form-elements/form-elements.pug
         include ./user-profile/user-profile.pug
         include ./news/events.pug
         include ./news/news.pug
+        include ./calendar/calendar.pug
         .wrapper
             section.flex-container.flex-container_flex-dir-col
                 header.head standart buttons
                 .buttons__item.buttons__item_big-margin
-                    +buttons('s','green')
-                    +buttons('b','green')
-                    +buttons('b','red')
-                    +buttons('s','red')            
+                    +buttons('s','green', "", "button")
+                    +buttons('b','green', "", "button")
+                    +buttons('b','red', "", "button")
+                    +buttons('s','red', "", "button")            
                 .buttons__item
-                    +buttons('s','green','border_bottom')
-                    +buttons('b','green','border_bottom')
-                    +buttons('b','red','border_bottom')
-                    +buttons('s','red','border_bottom') 
+                    +buttons('s','green','border-bottom', "button")
+                    +buttons('b','green','border-bottom', "button")
+                    +buttons('b','red','border-bottom', "button")
+                    +buttons('s','red','border-bottom', "button") 
                 .buttons__item
-                    +buttons('s','green','empty')
-                    +buttons('b','green','empty')
-                    +buttons('b','red','empty')
-                    +buttons('s','red','empty') 
+                    +buttons('s','green','empty', "button")
+                    +buttons('b','green','empty', "button")
+                    +buttons('b','red','empty', "button")
+                    +buttons('s','red','empty', "button") 
             section.container
                 header.head arrows buttons
                 .buttons__item.buttons__item_big-margin
@@ -83,7 +85,7 @@ html(lang="en")
                 header.head form elements
                 .flex-container
                     section.form-container
-                        include ./form-elements/form-elements.pug
+                        +form("green", "border-bottom")
                     section.toggles-boxes-container
                         header.head toggles
                         .flex-container
@@ -125,7 +127,7 @@ html(lang="en")
                 .calendar__wrapper
                     header.head calendar
                     .calendar__item
-                        include ./calendar/calendar.pug
+                        +calendar()
                 .calendar__wrapper
                     header.head messaging
                     .calendar__item
