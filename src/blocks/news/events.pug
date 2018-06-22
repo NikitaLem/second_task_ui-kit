@@ -1,11 +1,11 @@
-mixin events(dateNum, dateMonth, title, ImgSrc)
-    div(class="events")
-        div(class="events__image-container")
+mixin events(dateNum, dateMonth, title, text, ImgSrc)
+    article(class="events")
+        section(class="events__image-container")
             img(class="events__image" src=ImgSrc alt="pic")
-        div(class="events__content")
+        section(class="events__content")
             div(class="events__date")
-                div(class="events__date_num")=dateNum 
-                div(class="events__date_month")=dateMonth
-            div(class="events__header")=title
-            div(class="events__text") Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            button(class="events__button") ADD TO CALENDAR
+                div(class="events__num")=dateNum 
+                div(class="events__month")=dateMonth
+            div(class="events__title")=title
+            div(class="events__text")= text
+            button(class="events__button") add to calendar

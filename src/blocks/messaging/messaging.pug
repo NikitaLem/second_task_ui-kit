@@ -1,14 +1,16 @@
 script(src="https://use.fontawesome.com/releases/v5.0.7/js/all.js" defer)
 
-.messaging
-    .messaging__header
-        span.messaging__name Atickus Finch
-        .messaging__avatar
-    .messaging__body
-        .messaging__icons
-            <i class="icons fas fa-envelope"></i>
-            <i class="icons fas fa-camera"></i>
-        .messaging__chat-box
-            .messaging__message.messaging__message_get Hurr!
-        .messaging__message.messaging__message_give(contenteditable='true')
-        button.messaging__button REPLY
+mixin messaging(name, picSrc) 
+    article.messaging
+        header.messaging__header
+            .messaging__name= name
+            .messaging__avatar-container
+                img(class="messaging__avatar" src=picSrc alt="avatar")
+        section.messaging__body
+            .messaging__icons
+                <i class="icons fas fa-envelope"></i>
+                <i class="icons fas fa-camera"></i>
+            .messaging__chat-box
+                .messaging__text-box.messaging__text-box_received Hurr!
+            .messaging__text-box.messaging__text-box_sent(contenteditable='true')
+            button.messaging__button REPLY

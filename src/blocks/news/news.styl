@@ -1,11 +1,13 @@
 .news
   display flex
-  width 41.14vw
-  height 30vw
+  width 555px
+  height 405px
+  @media only screen and (max-width 800px)
+    width 288px
+    height 212px
   &__image-container
     float left
     width 32.99%
-    border-radius 5px 0 0 5px
   &__image
     width 100%
     height 100%
@@ -16,45 +18,28 @@
     border-radius 0 5px 5px 0
     background #e75735
     color #ffffff
-    padding 3.14vw 3.43vw 0 3.28vw
-  &__header
-    font-family 'Conv_Lato-Light'
-    font-size 4vw
-  &__date
-    font-family 'Conv_Lato-Black'
-    font-size 1.57vw
-    margin-top 1.57vw
-  &__text
-    font-family 'Conv_Lato-Regular'
-    font-size 1.57vw
-    margin-top 2.14vw
-
-@media only screen and (max-width 700px)
-  .news
-    display flex
-    width 288px
-    height 212px
-    &__image
-      float left
-      width 32.99%
-      border-radius 5px 0 0 5px
-      background url('../images/12.jpg') 50% 50% no-repeat
-      background-size cover
-    &__content
-      float left
-      width 67.01%
-      border-radius 0 5px 5px 0
-      background #e75735
-      color #ffffff
+    padding 42px 46px 0 44px
+    @media only screen and (max-width 800px)
       padding 22px 0 0 22px
-    &__header
-      font-family 'Conv_Lato-Light'
-      font-size 28px
-    &__date
-      font-family 'Conv_Lato-Black'
-      font-size 11px
-      margin-top 11px
-    &__text
-      font-family 'Conv_Lato-Regular'
-      font-size 11px
-      margin-top 16px
+  &__title
+    font-family 'Lato', Arial, sans-serif
+    font-weight 300
+    font-style normal
+    font-size 5.4rem
+    @media only screen and (max-width 800px)
+      font-size 2.8rem
+  &__date
+    font-size 2.1rem
+    margin-top 2.1rem
+    @media only screen and (max-width 800px)
+      font-size 1.1rem
+      margin-top 1.1rem
+  &__text
+    font-family 'Lato', Arial, sans-serif
+    font-weight 400
+    font-style normal
+    font-size 2.1rem
+    margin-top 2.9rem
+    @media only screen and (max-width 800px)
+      font-size 1.1rem
+      margin-top 1.6rem

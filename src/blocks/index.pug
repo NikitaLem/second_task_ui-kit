@@ -28,59 +28,60 @@ html(lang="en")
         include ./news/events.pug
         include ./news/news.pug
         include ./calendar/calendar.pug
+        include ./messaging/messaging.pug
         .wrapper
             section.flex-container.flex-container_flex-dir-col
                 header.head standart buttons
                 .buttons__item.buttons__item_big-margin
-                    +buttons('s','green', "", "button")
-                    +buttons('b','green', "", "button")
-                    +buttons('b','red', "", "button")
-                    +buttons('s','red', "", "button")            
+                    +buttons("s", "green", "", "button")
+                    +buttons("b", "green", "", "button")
+                    +buttons("b", "red", "", "button")
+                    +buttons("s", "red", "", "button")            
                 .buttons__item
-                    +buttons('s','green','border-bottom', "button")
-                    +buttons('b','green','border-bottom', "button")
-                    +buttons('b','red','border-bottom', "button")
-                    +buttons('s','red','border-bottom', "button") 
+                    +buttons("s", "green", "border-bottom", "button")
+                    +buttons("b", "green", "border-bottom", "button")
+                    +buttons("b", "red", "border-bottom", "button")
+                    +buttons("s", "red", "border-bottom", "button") 
                 .buttons__item
-                    +buttons('s','green','empty', "button")
-                    +buttons('b','green','empty', "button")
-                    +buttons('b','red','empty', "button")
-                    +buttons('s','red','empty', "button") 
+                    +buttons("s", "green", "empty", "button")
+                    +buttons("b", "green", "empty", "button")
+                    +buttons("b", "red", "empty", "button")
+                    +buttons("s", "red", "empty", "button") 
             section.container
                 header.head arrows buttons
                 .buttons__item.buttons__item_big-margin
-                    +arw-buttons('white', 'left')
-                    +arw-buttons('white', 'right')
-                    +arw-buttons('grey', 'left')
-                    +arw-buttons('grey', 'right')
-                    +arw-buttons('green', 'left')
-                    +arw-buttons('green', 'right')
+                    +arw-buttons("white", "left")
+                    +arw-buttons("white", "right")
+                    +arw-buttons("grey", "left")
+                    +arw-buttons("grey", "right")
+                    +arw-buttons("green", "left")
+                    +arw-buttons("green", "right")
             section.container
                 header.head percentages/pie-chart
                 .charts-wrapper
                     .charts-item
-                        +prcChart('0','1') 
+                        +prcChart("0","1") 
                     .charts-item
-                        +prcChart('38','1')
+                        +prcChart("38","1")
                     .charts-item
-                        +prcChart('62','1')
+                        +prcChart("62","1")
                     .charts-item
-                        +prcChart('89','1')
+                        +prcChart("89","1")
                     .charts-item.charts-item_pie
                         include ./prc-charts/pie-charts.pug
             section.container
                 header.head sliders
                 .flex-container.flex-container_justified-between
                     .sliders__item
-                        +sliders('red','no','popup')
+                        +sliders("red", "no", "popup")
                     .sliders__item
-                        +sliders('green','grade','track')
+                        +sliders("green", "grade", "track")
             section.container
                 header.head stages
                 .container
                     +stages('5')
                     .container
-                        input(type="number" id="test" min='0')
+                        input(type="number" id="test" min="0")
             section.container
                 header.head form elements
                 .flex-container
@@ -103,35 +104,35 @@ html(lang="en")
                 section.search-profile-container
                     header.head search / drop down
                     .flex-container.flex-container_flex-dir-col
-                        +search('grey','Search')
-                        +search('red',"I've not found what I'm looking for...")
+                        +search("grey","Search")
+                        +search("red","I've not found what I'm looking for...")
                         include ./search/drop-down.pug
                 section.search-profile-container
                     header.head user profile
                     .flex-container.flex-container_justified-center
-                        +user-profile('grey-orange','img1', 'Alex Orange', 'ULTRAVIOLANCER')
+                        +user-profile("grey-orange","img1", "Alex Orange", "ULTRAVIOLANCER")
                     .flex-container.flex-container_justified-center
-                        +user-profile('green-white','img2', 'Zigmund Freid', 'WEB DESIGNER')
+                        +user-profile("green-white", "img2", "Zigmund Freid", "WEB DESIGNER")
             section.flex-container.flex-container_flex-dir-col
                 header.head news & events
-                .flex-container.flex-container_justified-between
+                .news__wrapper
                     .news__item
-                        +news('24 AUGUST 2013',"It's all going downhill","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed condimentum aliquet venenatis. Etiam a nisi nunc, a tincidunt eros.", './images/12.jpg')
+                        +news("24 AUGUST 2013","It's all going downhill","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed condimentum aliquet venenatis. Etiam a nisi nunc, a tincidunt eros.", "./images/12.jpg")
                     .events__item
-                        +events('24','Aug','THIS IS THE TITLE', './images/13.jpg')
+                        +events("24","Aug","THIS IS THE TITLE", "Lorem ipsum dolor sit amet, consectetur adipiscing elit.", "./images/event-pic.jpg")
             section.flex-container.flex-container_flex-dir-col
                 header.head location
                 .container
                     include ./location/location.pug
             section.flex-container
-                .calendar__wrapper
+                .calendar-messaging__wrapper
                     header.head calendar
-                    .calendar__item
+                    .container
                         +calendar()
-                .calendar__wrapper
+                .calendar-messaging__wrapper
                     header.head messaging
-                    .calendar__item
-                        include ./messaging/messaging.pug
+                    .container
+                        +messaging("Константин Константинопольский", "../images/15.jpg")
             section.flex-container.flex-container_flex-dir-col
                 header.head video
                 .video__container

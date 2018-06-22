@@ -1,7 +1,8 @@
 .messaging__header
   position relative
   width 288px
-  height 116px
+  min-height 116px
+  padding 23px 0 49px 0
   border-radius 4px 4px 0 0
   background -webkit-linear-gradient(top, #4eb7a8 0%, #4eb7a8 71%, #46ab9d 71%, #46ab9d 100%)
   background -moz-linear-gradient(top, #4eb7a8 0%, #4eb7a8 71%, #46ab9d 71%, #46ab9d 100%)
@@ -9,29 +10,32 @@
   flex-direction column
   align-items center    
 .messaging__name
-  font-family 'Conv_Lato-Regular'
-  font-size 18px
+  font-family 'Lato', Arial, sans-serif
+  font-weight 400
+  font-style normal
+  font-size 1.8rem
+  text-align center
   color #ffffff
-  margin-top 23px
-.messaging__avatar
+.messaging__avatar-container
   width 84px
   height 84px
-  background-image url('../../src/images/15.jpg')
-  background-position 50% 50%
-  background-size cover
   border #e5e5e5 solid
   border-width 4px
   border-radius 50%
   position absolute
   top (100% - @height/2 + @border-width)
   z-index 999
+.messaging__avatar
+  width 100%
+  height 100%
+  border-radius 50%
 .messaging__body
   width 288px
-  height 312px
   background #f2f2f2
   border-radius 0 0 4px 4px
-  padding 23px 22px 26px 22px
+  padding 23px 22px 42px 22px
 .messaging__icons
+  font-size 1.6rem
   color #8e8d8d
   display flex
   justify-content space-between
@@ -40,8 +44,8 @@
   cursor pointer
   color #46ab9d
 .messaging__chat-box
-  position relative
-  max-height 84px
+  margin-top 9px
+  max-height 75px
   overflow-y auto
   overflow-x hidden
   &::-webkit-scrollbar
@@ -55,21 +59,21 @@
     background #8e8d8d
     height 5px
     border-radius 2px
-.messaging__message
-  font-family 'Conv_Lato-Bold'
-  font-size 12.5px
+.messaging__text-box
+  font-size 1.25rem
   color #868686
   position relative
   width 243px
-  height 69px
+  min-height 69px
   background #ffffff
   margin-top 15px
   border-radius 4px
   padding 18px
   outline none
-  &_get
+  &:first-child
+    margin-top 6px
+  &_received
     overflow-wrap break-word
-    overflow-y auto
     &::-webkit-scrollbar
       width 5px
     &::-webkit-scrollbar-track
@@ -86,7 +90,7 @@
       position absolute
       bottom 100%
       left (50% - @border-width/2)
-  &_give
+  &_sent
     background #e5e5e5
     border #ffffff solid 2px
     box-sizing border-box
@@ -109,9 +113,10 @@
   border-radius 3px
   cursor pointer
   border none
-  outline none
-  font-family 'Conv_Lato-Black'
-  font-size 12px
+  font-family 'Lato', Arial, sans-serif
+  font-weight 900
+  font-style normal
+  font-size 1.2rem
   color #fff
   background-color #4eb7a8
   border-bottom #28a290 solid 3px
