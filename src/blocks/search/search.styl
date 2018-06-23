@@ -1,15 +1,14 @@
 .search
   display inline-block
 .search__input
-  border none 
-  outline none 
-  border-radius 5px 0 0 5px
-  height 28px
-  width 255px
-  padding 5px 0 7px 8px
   float left
-  font-family 'Conv_SourceSansPro-Regular'
-  font-size 14px
+  border none
+  border-radius 5px 0 0 5px
+  width 255px
+  min-height 30px
+  padding 5px 0 7px 8px
+  font-family 'SourceSansPro', Arial, sans-serif
+  font-size 1.4rem
   &_grey
     background #e5e5e5
     color #888888
@@ -20,13 +19,12 @@
       color #ffffff 
 .search__button
   width 33px
-  height 28px
+  min-height 30px
   background #e75735
-  border none 
-  outline none 
+  border none
   border-radius 0 5px 5px 0
   float left
   color #ffffff
   cursor pointer
   &:hover
-    background: rgba(255, 175, 100, 1)
+    background: rgb(255, 175, 100)

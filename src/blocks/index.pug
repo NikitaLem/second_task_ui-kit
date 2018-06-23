@@ -23,6 +23,7 @@ html(lang="en")
         include ./form-elements/toggles.pug
         include ./form-elements/thick-boxes.pug
         include ./search/search.pug
+        include ./search/drop-down.pug
         include ./form-elements/form-elements.pug
         include ./user-profile/user-profile.pug
         include ./news/events.pug
@@ -106,7 +107,7 @@ html(lang="en")
                     .flex-container.flex-container_flex-dir-col
                         +search("grey","Search")
                         +search("red","I've not found what I'm looking for...")
-                        include ./search/drop-down.pug
+                        +drop-down("option1", "option2", "option3", "option4")
                 section.search-profile-container
                     header.head user profile
                     .flex-container.flex-container_justified-center
