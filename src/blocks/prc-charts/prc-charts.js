@@ -9,7 +9,6 @@ $( document ).ready(function() {
         foregroundBorderWidth: 5,
         fontColor: '#9d9d9d',
         percentageTextSize: 40,
-        textAdditionalCss: 'font-family: Conv_Lato-Light',
         noPercentageSign: true
     });
 })
