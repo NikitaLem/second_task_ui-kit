@@ -1,6 +1,6 @@
 mixin drop-down(option1, option2, option3, option4)
-    div(class="drop-down")
-        form(class="drop-down__form" action="/")
+    form(class="drop-down__form" action="/")
+        div(class="drop-down")
             select(class="drop-down__input" type="text" name="drop-down")
                 option(value="default" disabled selected) Choose An option
                 option(value="option2")= option1

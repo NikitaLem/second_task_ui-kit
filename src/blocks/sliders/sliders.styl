@@ -1,15 +1,15 @@
 slider-width = 37.14vw
 
-.sliders
+.slider
   -webkit-appearance none
-  appearance none 
+  appearance none
   width 100%
   max-width slider-width
   height 5px
   background #e5e5e5
   outline none
   border-radius 3px
-.sliders::-webkit-slider-thumb
+.slider::-webkit-slider-thumb
   position relative
   -webkit-appearance none
   appearance none
@@ -17,23 +17,22 @@ slider-width = 37.14vw
   height 19px
   border-radius 50%
   cursor pointer
-.sliders_red::-webkit-slider-thumb
+.slider_red::-webkit-slider-thumb
   background #e75735
-.sliders_green::-webkit-slider-thumb
+.slider_green::-webkit-slider-thumb
   background #4eb7a8
-.sliders__popup
+.slider__popup
   position absolute
   padding 3px 5px 0 5px
   background #e75735
-  font-family 'Conv_Lato-Black'
-  font-size 13px
+  font-size 1.3rem
   color #ffffff
   border-radius 3px
   transition opacity 0.2s
   opacity 0
-.sliders__popup_show
+.slider__popup_showed
   opacity 1
-.sliders__popup::after
+.slider__popup::after
   content ""
   position absolute
   top 100%
@@ -42,17 +41,16 @@ slider-width = 37.14vw
   border-width 3px
   border-style solid
   border-color #e75735 transparent transparent transparent
-.sliders_track
+.slider_track
   background -webkit-linear-gradient(left, #4eb7a8 0%, #4eb7a8 1%, #e5e5e5 1% ,#e5e5e5 100%)
-.sliders__grade
+.slider__grade
   display none
+.slider__grade_true
+  display flex
   justify-content space-between
   margin-top 12px
-  width 100%
   max-width slider-width
-.sliders__grade_grade
-  display flex
-.sliders__value
+  width 100%
+.slider__value
   color #d1d1d1
-  font-size 11px
-  font-family 'Conv_Lato-Black'
+  font-size 1.1rem

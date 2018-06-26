@@ -1,15 +1,16 @@
 script(src="https://use.fontawesome.com/releases/v5.0.7/js/all.js" defer)
 
-mixin user-profile(styleType, imgID, name, spec)
+mixin user-profile(styleType, imgSrc, name, spec)
     div(class="user-profile")
-        div(class="user-profile__img" id=imgID)
+        div(class="user-profile__img-container")
+            img(class="user-profile__img" src=imgSrc alt="avatar")
         div(class="user-profile__info user-profile__info_"+styleType)
             div(class="user-profile__name user-profile__name_"+styleType)=name
             div(class="user-profile__spec user-profile__spec_"+styleType)=spec
             div(class="icon__container")
-                a(href="#" class="user-profile__icon user-profile__icon_"+styleType)
+                a(href="/mock-address/change-me" class="user-profile__icon user-profile__icon_"+styleType)
                     i(class="fab fa-facebook-f")
-                a(href="#" class="user-profile__icon user-profile__icon_"+styleType+" user-profile__icon_"+styleType+"_red")
+                a(href="/mock-address/change-me" class="user-profile__icon user-profile__icon_"+styleType+" user-profile__icon_"+styleType+"_red")
                     i(class="fab fa-twitter")
-                a(href="#" class="user-profile__icon user-profile__icon_"+styleType)
+                a(href="/mock-address/change-me" class="user-profile__icon user-profile__icon_"+styleType)
                     i(class="fas fa-basketball-ball")

@@ -30,6 +30,7 @@ html(lang="en")
         include ./news/news.pug
         include ./calendar/calendar.pug
         include ./messaging/messaging.pug
+        include ./video/video.pug
         .wrapper
             section.flex-container.flex-container_flex-dir-col
                 header.head standart buttons
@@ -74,9 +75,9 @@ html(lang="en")
                 header.head sliders
                 .flex-container.flex-container_justified-between
                     .sliders__item
-                        +sliders("red", "no", "popup")
+                        +slider("red", "no", "popup")
                     .sliders__item
-                        +sliders("green", "grade", "track")
+                        +slider("green", "true", "track")
             section.container
                 header.head stages
                 .container
@@ -101,22 +102,25 @@ html(lang="en")
                                 +thick-boxes("checked")
                             .toggles-boxes-item
                                 +thick-boxes()
-            section.flex-container
+            section.responsive-flex-container
                 section.search-profile-container
                     header.head search / drop down
                     .flex-container.flex-container_flex-dir-col
-                        +search("grey","Search")
-                        +search("red","I've not found what I'm looking for...")
-                        +drop-down("option1", "option2", "option3", "option4")
+                        .search-item.search-item_no-margin
+                            +search("grey","Search")
+                        .search-item
+                            +search("red","I've not found what I'm looking for...")
+                        .search-item
+                            +drop-down("option1", "option2", "option3", "option4")
                 section.search-profile-container
                     header.head user profile
                     .flex-container.flex-container_justified-center
-                        +user-profile("grey-orange","img1", "Alex Orange", "ULTRAVIOLANCER")
+                        +user-profile("grey-orange","../images/10.png", "Alex Orange", "ULTRAVIOLANCER")
                     .flex-container.flex-container_justified-center
-                        +user-profile("green-white", "img2", "Zigmund Freid", "WEB DESIGNER")
+                        +user-profile("green-white", "../images/11.png", "Zigmund Freid", "WEB DESIGNER")
             section.flex-container.flex-container_flex-dir-col
                 header.head news & events
-                .news__wrapper
+                .responsive-flex-container
                     .news__item
                         +news("24 AUGUST 2013","It's all going downhill","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed condimentum aliquet venenatis. Etiam a nisi nunc, a tincidunt eros.", "./images/12.jpg")
                     .events__item
@@ -137,4 +141,4 @@ html(lang="en")
             section.flex-container.flex-container_flex-dir-col
                 header.head video
                 .video__container
-                    include ./video/video.pug
+                    +video()

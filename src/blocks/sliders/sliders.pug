@@ -1,9 +1,10 @@
-mixin sliders(color, gr, pop, tr)
-    input(class="sliders sliders_"+color+" sliders_"+pop+" sliders_"+tr  type='range' value="1" min='0' max='100' step='1' list='sliders_data')
-    div(class="sliders__popup")
-    div(class="sliders__grade sliders__grade_"+gr)
-        span(class="sliders__value") 0
-        span(class="sliders__value") 25
-        span(class="sliders__value") 50
-        span(class="sliders__value") 75
-        span(class="sliders__value") 100
+mixin slider(color, gr, pop, tr)
+    form(class="slider-form")
+        input(class="slider slider_"+color+" slider_"+pop+" slider_"+tr  type="range" value="1" min="0" max="100" step="1")
+        div(class="slider__popup")
+        div(class="slider__grade slider__grade_"+gr)
+            span(class="slider__value") 0
+            span(class="slider__value") 25
+            span(class="slider__value") 50
+            span(class="slider__value") 75
+            span(class="slider__value") 100

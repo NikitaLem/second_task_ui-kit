@@ -1,8 +1,8 @@
 /*JS code for sliders with popup*/
-var sliderPopup = document.querySelectorAll('.sliders_popup');
-var popup = document.querySelector('.sliders__popup');
+var sliderPopup = document.querySelectorAll('.slider_popup');
+var popup = document.querySelector('.slider__popup');
 
-for(var i =0; i<sliderPopup.length; i++) {
+for(var i =0; i < sliderPopup.length; i++) {
     sliderPopup[i].addEventListener('mousemove', popupGo, false);
     sliderPopup[i].addEventListener('mousedown', popupShow, false);
     sliderPopup[i].addEventListener('mouseup', popupHide, false);
@@ -15,16 +15,16 @@ function popupGo(e) {
 }
 
 function popupShow() {
-    popup.classList.add('sliders__popup_show');
+    popup.classList.add('slider__popup_showed');
 }
 
 function popupHide() {
-    popup.classList.remove('sliders__popup_show');
+    popup.classList.remove('slider__popup_showed');
 }
 /*JS code for sliders with track*/
 function sliderTrack() {
-    var val = $('.sliders_track').val();
-    $('.sliders_track').css({'background':'-webkit-linear-gradient(left, #4eb7a8 0%, #4eb7a8 '+val+'%, #e5e5e5 '+val+'% ,#e5e5e5 100%)'});
+    var val = $('.slider_track').val();
+    $('.slider_track').css({'background':'-webkit-linear-gradient(left, #4eb7a8 0%, #4eb7a8 '+val+'%, #e5e5e5 '+val+'% ,#e5e5e5 100%)'});
 }
 
-document.querySelector('.sliders_track').addEventListener('input', sliderTrack, false);
+document.querySelector('.slider_track').addEventListener('input', sliderTrack, false);

@@ -1,7 +1,8 @@
 link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css")
 
 mixin search(color, defText)
-    form(class="search")
-        input(class="search__input search__input_"+color type="search" placeholder=defText name="search" maxlength="37" autocomplete="on")
-        button(class="search__button" type="submit")
-            i(class="fa fa-search")
+    form(class="search-form")
+        div(class="search")
+            input(class="search__input search__input_"+color type="search" placeholder=defText name="search" maxlength="37" autocomplete="on")
+            button(class="search__button" type="submit")
+                i(class="fa fa-search")
