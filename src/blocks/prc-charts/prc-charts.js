@@ -1,6 +1,6 @@
-import '../../js/jquery.circliful.min'
+import './jquery.circliful.min';
 
-$( document ).ready(function() {
+$(document).ready(function() {
     $(".my-prc-chart_1").circliful({
         animation: 1,
         animationStep: 1,
@@ -9,6 +9,6 @@ $( document ).ready(function() {
         foregroundBorderWidth: 5,
         fontColor: '#9d9d9d',
         percentageTextSize: 40,
-        noPercentageSign: true
+        noPercentageSign: true,
     });
-})
+});

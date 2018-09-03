@@ -40,19 +40,15 @@
   height 1px
   border-radius 50%
   position absolute
-  opacity 0
-  transform scale(1)
+  cursor pointer
+  animation rippleShow 0.3s ease
   &_green
     background-color rgba(190, 243, 249, 0.3)
   &_red
     background-color rgba(246, 178, 162, 0.3)
-.ripple_show
-  animation rippleShow 0.3s ease
 
 @keyframes rippleShow
   0%
-    opacity 0
     transform scale(1)
   100%
-    opacity 1
     transform scale(70)
