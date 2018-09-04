@@ -1,5 +1,5 @@
 const myBtnFunc = function() {
-  const btnsWithRipple = document.querySelectorAll('.btn-with-ripple');
+  const btnsWithRipple = [...document.querySelectorAll('.btn-with-ripple')];
 
   btnsWithRipple.forEach((item) => { 
     item.addEventListener('click', rippleAnim, false); 

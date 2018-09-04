@@ -1,5 +1,5 @@
 const sliderWithPopup = function() {
-	const sliderPopups = document.querySelectorAll('.slider_popup');
+	const sliderPopups = [...document.querySelectorAll('.slider_popup')];
 	const popup = document.querySelector('.slider__popup');
 
 	const popupShow = function popupOnMouseDownShow() {
@@ -53,7 +53,7 @@ const sliderWithPopup = function() {
 };
 
 const sliderWithTrack = function() {
-	const sliderTracks = document.querySelectorAll('.slider_track');
+	const sliderTracks = [...document.querySelectorAll('.slider_track')];
 
 	const changeSliderTrack = function changeOnInputSliderTrack(event) {
     const target = event.target;
