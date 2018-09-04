@@ -1,21 +1,36 @@
-var inputs = document.querySelectorAll('.form__input');
-var alerts = document.querySelectorAll('.form__alert');
+const myForm = function() {
+  const myForm = document.forms['my-form'];
+  
+  const ckeckInput = function showOrHideAlertMessage(event) {
+    const target = event.target;
 
-for(var i=0; i<inputs.length; i++) {
-    inputs[i].addEventListener('blur', helper, false);
-}
+    if (!target.closest('.form__input')) return;
 
-function helper() {
-    for(var i=0; i<inputs.length; i++) {
-        if(inputs[i].value=='') {
-            alerts[i].innerHTML='ERROR';
-            alerts[i].classList.remove('form__alert_green');
-            alerts[i].classList.add('form__alert_red');
-        }
-        if(inputs[i].value!=='') {
-            alerts[i].innerHTML='THANKS!';
-            alerts[i].classList.remove('form__alert_red');
-            alerts[i].classList.add('form__alert_green');
-        }
+    const alert = target.nextElementSibling.querySelector('.form__alert');
+
+    if (target.value === '') {
+      alert.innerHTML = 'ERROR';
+      if (alert.classList.contains('form__alert_ok')) alert.classList.remove('form__alert_ok');
+      alert.classList.add('form__alert_error');
+    } else {
+      alert.innerHTML = 'THANKS';
+      if (alert.classList.contains('form__alert_error')) alert.classList.remove('form__alert_error');
+      alert.classList.add('form__alert_ok');
     }
-}
+  };
+
+  const removeError = function removeErrorMessage(event) {
+    const target = event.target;
+
+    if (!target.closest('.form__input')) return;
+
+    const alert = target.nextElementSibling.querySelector('.form__alert');
+
+    alert.className = 'form__alert';
+  };
+
+  myForm.addEventListener('blur', ckeckInput, true);
+  myForm.addEventListener('focus', removeError, true);
+};
+
+export { myForm };
