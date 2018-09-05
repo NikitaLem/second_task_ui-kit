@@ -4,7 +4,7 @@ import '../blocks/prc-charts/prc-charts';
 import { sliderWithPopup, sliderWithTrack } from '../blocks/sliders/sliders';
 import { myStages } from '../blocks/stages/stages';
 import { myForm } from '../blocks/form-elements/form/form-elements';
-import '../blocks/calendar/calendar.js';
+import { myCalendar } from '../blocks/calendar/calendar';
 import '../blocks/messaging/messaging.js';
 import '../assets/favicons/favicons.js';
 
@@ -17,4 +17,5 @@ const css = require('../blocks/index.styl');
   sliderWithTrack();
   myStages();
   myForm();
+  myCalendar();
 }());

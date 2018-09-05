@@ -12,33 +12,34 @@ div(class="location__bar")
             
 script.
     function myMap() {
-        var mapCanvas = document.getElementById("map");
-        var myCenter = new google.maps.LatLng(55.83, 49.06);
-        var mapOptions = {
+        const mapCanvas = document.getElementById('map');
+        const myCenter = new google.maps.LatLng(55.83, 49.06);
+        const mapOptions = {
             center: myCenter,
-            zoom: 17
+            zoom: 17,
         };
-        var map = new google.maps.Map(mapCanvas, mapOptions);
-        var marker = new google.maps.Marker({
+        const map = new google.maps.Map(mapCanvas, mapOptions);
+        const marker = new google.maps.Marker({
             position: myCenter, 
             icon: "images/14.png",
             animation: google.maps.Animation.DROP,
-            draggable: true
+            draggable: true,
             });
         marker.setMap(map);
-        var btnMark = document.getElementById('mark');
-        var btnCenter = document.getElementById('center');
+
+        const btnMark = document.getElementById('mark');
+        const btnCenter = document.getElementById('center');
+
+        const setMark = function setMarkToCurrentCenter() {    
+            marker.position = map.getCenter();
+            marker.setMap(map);
+        };
+
+        const returnToCenter = function returnToDefaultCenter() {
+            map.panTo(myCenter);
+        }
 
         btnMark.addEventListener('click', setMark, false);
         btnCenter.addEventListener('click', returnToCenter, false);
-
-        function setMark() {    
-            marker.position = map.getCenter();
-            marker.setMap(map);
-        }
-
-        function returnToCenter() {
-            map.panTo(myCenter);
-        }
     }
 script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBuI7KLAnp1-V15NterLpZP-TtTsgT_PTM&callback=myMap")
