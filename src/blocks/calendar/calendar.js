@@ -9,6 +9,36 @@ const myCalendar = function() {
 
   const date = new Date();
 
+  const showInfo = function() {
+    const currentDate = new Date();
+
+    const dateDiffInDays = Math.round((date - currentDate) / (24 * 60 * 60 *1000));
+
+    switch (dateDiffInDays) {
+      case 0: {
+        infoView.innerHTML = 'TODAY';
+        break;
+      }
+      case 1: {
+        infoView.innerHTML = 'TOMMOROW';
+        break;
+      }
+      case -1: {
+        infoView.innerHTML = 'YESTERDAY';
+        break;
+      }
+      default: {
+        if (dateDiffInDays > 0) {
+          infoView.innerHTML = `IN ${dateDiffInDays} DAYS`;
+          break;
+        }
+
+        infoView.innerHTML = `${-dateDiffInDays} DAYS AGO`;
+        break;
+      }
+    }
+  };
+
   const setCalendar = function setMonthDateAndFillCalendar() {
     const defaultMonth = date.getMonth();
     const currentMonth = date.toLocaleString('en-us', { month: 'long' });
@@ -41,36 +71,6 @@ const myCalendar = function() {
 
     date.setMonth(defaultMonth);
     showInfo();
-  };
-
-  const showInfo = function() {
-    const currentDate = new Date();
-
-    const dateDiffInDays = Math.round((date - currentDate) / (24 * 60 * 60 *1000));
-
-    switch (dateDiffInDays) {
-      case 0: {
-        infoView.innerHTML = 'TODAY';
-        break;
-      }
-      case 1: {
-        infoView.innerHTML = 'TOMMOROW';
-        break;
-      }
-      case -1: {
-        infoView.innerHTML = 'YESTERDAY';
-        break;
-      }
-      default: {
-        if (dateDiffInDays > 0) {
-          infoView.innerHTML = `IN ${dateDiffInDays} DAYS`;
-          break;
-        }
-
-        infoView.innerHTML = `${-dateDiffInDays} AGO`;
-        break;
-      }
-    }
   };
 
   const setNextMonth = function addMonthByOneAndSetCalendar() {
