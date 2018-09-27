@@ -47,51 +47,47 @@ body
     justify-content space-between
   &_justified-center
     justify-content center
-.buttons__item
+.buttons-wrapper
   display flex
   align-items flex-end
   justify-content center
   margin-top 20px
   &_big-margin
     margin-top 3%
-.btn, .arw-btn
-  margin 0 12px
+  &__item
+    margin 0 12px
 .charts-wrapper
   display flex
   justify-content space-around
-.charts-item
-  position relative
-  width 13.57vw
-  margin-top: 20px
-  &_pie
+  &__item
+    position relative
+    width 13.57vw
+    margin-top: 20px
+  &__item-pie
     padding 20px
     width 13.3vw
-.sliders__item
+.slider-wrapper
   max-width 500px
   width 100%
-.form-container
+.form-wrapper
   width 50%
-.toggles-boxes-container
+.toggles-boxes-wrapper
   display flex
   flex-direction column
   align-items center
   width 50%
-.toggles-boxes-container .flex-container + header
+.toggles-boxes-wrapper .flex-container + header
   margin-top 3%
 .toggles-boxes-item
   margin 0 7.5px
-.search-profile-container
+.search-wrapper
   display flex
   flex-direction column
   width 50%
-.search-item
+.search-wrapper-item
   margin-top 15px
   &_no-margin
     margin 0
-.user-profile__container
-  margin-top 3%
-  display flex
-  justify-content center
 .responsive-flex-container
   margin-top 3%
   display flex
@@ -99,11 +95,11 @@ body
   @media only screen and (max-width 800px)
     flex-direction column
     align-items center
-.calendar-messaging__wrapper
+.calendar-messaging-wrapper
   display flex
   flex-direction column
   align-items center
   flex-basis 50%
   margin-top 3%
-.video__container
+.video-wrapper
   margin 3% auto 0 auto

@@ -1,6 +1,6 @@
-mixin slider(color, gr, pop, tr)
+mixin slider({color, gr, style1, style2})
     form(class="slider-form")
-        input(class="slider slider_"+color+" slider_"+pop+" slider_"+tr  type="range" value="1" min="0" max="100" step="1")
+        input(class="slider slider_"+color+" slider_"+style1+" slider_"+style2  type="range" value="1" min="0" max="100" step="1")
         div(class="slider__popup")
         div(class="slider__grade slider__grade_"+gr)
             span(class="slider__value") 0

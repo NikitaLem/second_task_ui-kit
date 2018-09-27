@@ -34,111 +34,129 @@ html(lang="en")
         .wrapper
             section.flex-container.flex-container_flex-dir-col
                 header.head standart buttons
-                .buttons__item.buttons__item_big-margin
-                    +buttons("s", "green", "", "button")
-                    +buttons("b", "green", "", "button")
-                    +buttons("b", "red", "", "button")
-                    +buttons("s", "red", "", "button")            
-                .buttons__item
-                    +buttons("s", "green", "border-bottom", "button")
-                    +buttons("b", "green", "border-bottom", "button")
-                    +buttons("b", "red", "border-bottom", "button")
-                    +buttons("s", "red", "border-bottom", "button") 
-                .buttons__item
-                    +buttons("s", "green", "empty", "button")
-                    +buttons("b", "green", "empty", "button")
-                    +buttons("b", "red", "empty", "button")
-                    +buttons("s", "red", "empty", "button") 
+                .buttons-wrapper.buttons-wrapper_big-margin
+                    .buttons-wrapper__item
+                        +buttons({size: "s", color: "green", atr: "", text: "button" })
+                    .buttons-wrapper__item
+                        +buttons({size: "b", color: "green", atr: "", text: "button" })
+                    .buttons-wrapper__item
+                        +buttons({size: "b", color: "red", atr: "", text: "button" })
+                    .buttons-wrapper__item
+                        +buttons({size: "s", color: "red", atr: "", text: "button" })            
+                .buttons-wrapper
+                    .buttons-wrapper__item
+                        +buttons({size: "s", color: "green", atr: "border-bottom", text:"button"})
+                    .buttons-wrapper__item
+                        +buttons({size: "b", color: "green", atr: "border-bottom", text: "button" })
+                    .buttons-wrapper__item
+                        +buttons({size: "b", color: "red", atr: "border-bottom", text: "button" })
+                    .buttons-wrapper__item
+                        +buttons({size: "s", color: "red", atr: "border-bottom", text: "button" }) 
+                .buttons-wrapper
+                    .buttons-wrapper__item
+                        +buttons({size: "s", color: "green", atr: "empty", text:"button"})
+                    .buttons-wrapper__item
+                        +buttons({size: "b", color: "green", atr: "empty", text: "button" })
+                    .buttons-wrapper__item
+                        +buttons({size: "b", color: "red", atr: "empty", text: "button" })
+                    .buttons-wrapper__item
+                        +buttons({size: "s", color: "red", atr: "empty", text: "button" }) 
             section.container
                 header.head arrows buttons
-                .buttons__item.buttons__item_big-margin
-                    +arw-buttons("white", "left")
-                    +arw-buttons("white", "right")
-                    +arw-buttons("grey", "left")
-                    +arw-buttons("grey", "right")
-                    +arw-buttons("green", "left")
-                    +arw-buttons("green", "right")
+                .buttons-wrapper.buttons-wrapper_big-margin
+                    .buttons-wrapper__item
+                        +arw-buttons({color: "white", direct: "left"})
+                    .buttons-wrapper__item
+                        +arw-buttons({color: "white", direct: "right"})
+                    .buttons-wrapper__item
+                        +arw-buttons({color: "grey", direct: "left"})
+                    .buttons-wrapper__item
+                        +arw-buttons({color: "grey", direct: "right"})
+                    .buttons-wrapper__item  
+                        +arw-buttons({color: "green", direct: "left"})
+                    .buttons-wrapper__item
+                        +arw-buttons({color: "green", direct: "right"})
             section.container
                 header.head percentages/pie-chart
                 .charts-wrapper
-                    .charts-item
-                        +prcChart("0","1") 
-                    .charts-item
-                        +prcChart("38","1")
-                    .charts-item
-                        +prcChart("62","1")
-                    .charts-item
-                        +prcChart("89","1")
-                    .charts-item.charts-item_pie
+                    .charts-wrapper__item
+                        +prcChart({num: "1", prc: "0"})
+                    .charts-wrapper__item
+                        +prcChart({num: "1", prc: "38"})
+                    .charts-wrapper__item
+                        +prcChart({num:"1", prc: "62"})
+                    .charts-wrapper__item
+                        +prcChart({num: "1", prc: "89"})
+                    .charts-wrapper__item.charts-wrapper__item-pie
                         include ./prc-charts/pie-charts.pug
             section.container
                 header.head sliders
                 .flex-container.flex-container_justified-between
-                    .sliders__item
-                        +slider("red", "no", "popup")
-                    .sliders__item
-                        +slider("green", "true", "track")
+                    .slider-wrapper
+                        +slider({color: "red", gr: "no", style1: "popup"})
+                    .slider-wrapper
+                        +slider({color: "green", gr: "true", style1: "track"})
             section.container
                 header.head stages
                 .container
-                    +stages('5')
+                    +stages({num: '5'})
                     .container
                         input(type="number" id="test" min="0")
             section.container
                 header.head form elements
                 .flex-container
-                    section.form-container
-                        +form("green", "border-bottom")
-                    section.toggles-boxes-container
+                    section.form-wrapper
+                        +form({color: "green", border: "border-bottom"})
+                    section.toggles-boxes-wrapper
                         header.head toggles
                         .flex-container
                             .toggles-boxes-item
-                                +toggles()
+                                +toggles({status: false})
                             .toggles-boxes-item
-                                +toggles("checked")
+                                +toggles({status: true})
                         header.head thick boxes
                         .flex-container
                             .toggles-boxes-item
-                                +thick-boxes("checked")
+                                +thick-boxes({status: true})
                             .toggles-boxes-item
-                                +thick-boxes()
+                                +thick-boxes({status: false})
             section.responsive-flex-container
-                section.search-profile-container
+                section.search-wrapper
                     header.head search / drop down
                     .flex-container.flex-container_flex-dir-col
-                        .search-item.search-item_no-margin
-                            +search("grey","Search")
-                        .search-item
-                            +search("red","I've not found what I'm looking for...")
-                        .search-item
-                            +drop-down("option1", "option2", "option3", "option4")
-                section.search-profile-container
+                        .search-wrapper-item.search-wrapper-item_no-margin
+                            +search({color: "grey", defText: "Search"})
+                        .search-wrapper-item
+                            +search({color:"red", defText: "I've not found what I'm looking for..."})
+                        .search-wrapper-item
+                            +drop-down({option1: "option1", option2: "option2", option3: "option3", option4: "option4"})
+                section.search-wrapper
                     header.head user profile
                     .flex-container.flex-container_justified-center
-                        +user-profile("grey-orange","./images/10.png", "Alex Orange", "ULTRAVIOLANCER")
+                        +user-profile({styleType: "grey-orange", imgSrc: "./images/10.png", name: "Alex Orange", spec: "ULTRAVIOLANCER"})
                     .flex-container.flex-container_justified-center
-                        +user-profile("green-white", "./images/11.png", "Zigmund Freid", "WEB DESIGNER")
+                        +user-profile({styleType: "green-white", imgSrc: "./images/11.png", name: "Zigmund Freid", spec: "WEB DESIGNER"})
             section.flex-container.flex-container_flex-dir-col
                 header.head news &amp events
                 .responsive-flex-container
-                    .news__item
-                        +news("24 AUGUST 2013","It's all going downhill","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed condimentum aliquet venenatis. Etiam a nisi nunc, a tincidunt eros.", "./images/12.jpg")
-                    .events__item
-                        +events("24","Aug","THIS IS THE TITLE", "Lorem ipsum dolor sit amet, consectetur adipiscing elit.", "./images/event-pic.jpg")
+                    .news-wrapper
+                        +news({date: "24 AUGUST 2013", title: "It's all going downhill", text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed condimentum aliquet venenatis. Etiam a nisi nunc, a tincidunt eros.", ImgSrc: "./images/12.jpg"})
+                    .events-wrapper
+                        +events({dateNum: "24", dateMonth: "Aug", title: "THIS IS THE TITLE", text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.", ImgSrc: "./images/event-pic.jpg"})
             section.flex-container.flex-container_flex-dir-col
                 header.head location
                 .container
                     include ./location/location.pug
             section.flex-container
-                .calendar-messaging__wrapper
+                .calendar-messaging-wrapper
                     header.head calendar
                     .container
                         +calendar()
-                .calendar-messaging__wrapper
+                .calendar-messaging-wrapper
                     header.head messaging
                     .container
-                        +messaging("Константин Константинопольский", "./images/15.jpg")
+                        +messaging({name: "Константин Константинопольский", picSrc: "./images/15.jpg"})
             section.flex-container.flex-container_flex-dir-col
                 header.head video
-                .video__container
-                    +video('https://www.youtube.com/embed/jL1zVdj1kcs')
+                .video-wrapper
+                    +video({videoSrc: "https://www.youtube.com/embed/jL1zVdj1kcs"})
